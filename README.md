@@ -1,7 +1,7 @@
 Introduction
 ============
 
-Copy vector.py module file directly into your project folder.
+Copy ``vector.py`` module file directly into your project folder.
 
 Then, import Vector from vector module
 (note lowercase 'v' in module name and uppercase 'V' in class name)
@@ -14,7 +14,7 @@ From now, you can use vectors in your program!
 Creating a new Vector
 =====================
 
-To create a new vector you enter Vector(<components>) with arbitrary
+To create a new vector you enter ``Vector(<components>)`` with arbitrary
 number of components separated with commas.
 examples:
 
@@ -32,7 +32,7 @@ You can also create a vector from a list:
 Vector components
 =================
 
-You can access first three vector components as x, y and z attributes:
+You can access first three vector components as ``x``, ``y`` and ``z`` attributes:
 
 	vec.x  # x-component
 	vec.y  # y-component
@@ -124,7 +124,7 @@ Additional functions
 ====================
 
 You can convert the vector into a nice looking string of components using
-str(vec).
+``str(vec)``.
 The components are rounded to three significant figures and they are enclosed
 in round brackets.
 
