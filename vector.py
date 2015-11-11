@@ -114,6 +114,15 @@ class Vector(object):
             raise TypeError("Can't take the dot product of non-vector")
         return sum(s * t for (s, t) in zip(self.components, vec.components))
         
+    def transform(self, matrix):
+        if any(len(row)-len(self.components) for row in matrix):
+            raise TypeError("Incorrect number of columns in the matrix")
+        components = (
+            sum(a*b for (a,b) in zip(row, self.components)) 
+            for row in matrix
+        )
+        return Vector(*components)
+
     def norm(self):
         return math.sqrt(sum(c*c for c in self.components))      
         
