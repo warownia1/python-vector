@@ -109,7 +109,7 @@ You can take a dot product of two vectors in a following way:
 
 Norm and unit vector
 --------------------
-Norm (magnitude) is obtained with norm() function or as the absolute value of 
+Norm (magnitude) is obtained with ``norm()`` function or as the absolute value of 
 the vector:
 
 	v.norm()  # 2.23606797749979
@@ -119,14 +119,24 @@ Unit vector:
 
 	v.unit()  # Vector(0.0, 0.4472135954999579, 0.8944271909999159)
 
+Transformation
+--------------
+You can multiply the vector by a transformation matrix using ``transform(<matrix>)`` method.
+The matrix should be a list of lists.
+Each inner list represents the row of the matrix and its length must be equal to the vector's length.
+
+example:
+
+	matrix = [[1, 3, 5],
+	          [2, 0, 0]]
+	vec = Vector(3, 1, -1)
+	vec.transform(matrix)  # Vector(1, 4)
 
 Additional functions
 ====================
 
-You can convert the vector into a nice looking string of components using
-``str(vec)``.
-The components are rounded to three significant figures and they are enclosed
-in round brackets.
+You can convert the vector into a nice looking string of components using ``str(vec)``.
+The components are rounded to three significant figures and they are enclosed in round brackets.
 
 example:
 
