@@ -1,4 +1,4 @@
-Introduction
+Installation
 ============
 
 Copy ``vector.py`` module file directly into your project folder.
